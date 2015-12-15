@@ -324,5 +324,5 @@ datetime <- function(x, locale = NULL, io = c("output", "input"))
     x <- gsub("%O?[gGUVW]", WEEK_OF_YEAR_IN, x)
     x <- case_insensitive(x)
   }
-  x
+  group(x)
 }
