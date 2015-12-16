@@ -5,9 +5,9 @@
 \alias{get_weekdays}
 \title{Get the days of the week}
 \usage{
-get_weekdays(abbreviate = FALSE, locale = NULL)
+get_weekdays(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 
-get_months(abbreviate = FALSE, locale = NULL)
+get_months(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 }
 \arguments{
 \item{abbreviate}{A logical value indicating whether or not to return
@@ -15,6 +15,8 @@ abbreviated names (if they are available).}
 
 \item{locale}{A string denoting the name of the locale to retrieve names in,
 or \code{NULL} to use the current locale.}
+
+\item{from}{Date to use for the first day/month.}
 }
 \value{
 A string containing a regular expression of the names of the days of
@@ -33,6 +35,8 @@ the locale.
 \examples{
 get_weekdays()
 get_weekdays(TRUE)
+get_months()
+get_months(TRUE)
 \dontrun{
 if(.Platform$OS.type == "windows")
 {

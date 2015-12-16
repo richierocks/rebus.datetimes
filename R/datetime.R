@@ -129,6 +129,7 @@ NULL
 #' abbreviated names (if they are available).
 #' @param locale A string denoting the name of the locale to retrieve names in,
 #' or \code{NULL} to use the current locale.
+#' @param from Date to use for the first day/month.
 #' @return A string containing a regular expression of the names of the days of
 #' the week, separated by pipes.  The first day of the week will be the current
 #' day.
@@ -139,6 +140,8 @@ NULL
 #' @examples
 #' get_weekdays()
 #' get_weekdays(TRUE)
+#' get_months()
+#' get_months(TRUE)
 #' \dontrun{
 #' if(.Platform$OS.type == "windows")
 #' {
@@ -155,19 +158,19 @@ NULL
 #' }
 #' }
 #' @export
-get_weekdays <- function(abbreviate = FALSE, locale = NULL)
+get_weekdays <- function(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 {
   weekday_names <- if(.Platform$OS.type == "windows")
   {
-    get_weekdays_windows(abbreviate, locale)
+    get_weekdays_windows(abbreviate, locale, from = from)
   } else
   {
-    get_weekdays_posix(abbreviate, locale)
+    get_weekdays_posix(abbreviate, locale, from = from)
   }
   or1(weekday_names)
 }
 
-get_weekdays_windows <- function(abbreviate = FALSE, locale = NULL)
+get_weekdays_windows <- function(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 {
   # TODO: Maybe worth reimplementing devtools::with_locale to clean this up.
   if(!is.null(locale))
@@ -179,18 +182,16 @@ get_weekdays_windows <- function(abbreviate = FALSE, locale = NULL)
     Sys.setlocale("LC_CTYPE", locale)
     Sys.setlocale("LC_TIME", locale)
   }
-  # 20 days is likely overkill, but there may be weird locales with long weeks.
-  days <- seq(Sys.Date(), Sys.Date() + 20, "1 day")
+  # All locales have 7 days in a week
+  days <- seq(from, from + 6, "1 day")
   weekday_names <- weekdays(days, abbreviate)
 
   # TODO: Is charset <- localeToCharset(Sys.getlocale("LC_TIME"))[1] platform independent?
   current_codepage <- as.character(l10n_info()$codepage)
-  unique(
-    iconv(weekday_names, from = current_codepage, to = "utf8")
-  )
+  iconv(weekday_names, from = current_codepage, to = "utf8")
 }
 
-get_weekdays_posix <- function(abbreviate = FALSE, locale = NULL)
+get_weekdays_posix <- function(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 {
   if(!is.null(locale))
   {
@@ -198,25 +199,25 @@ get_weekdays_posix <- function(abbreviate = FALSE, locale = NULL)
     on.exit(Sys.setlocale("LC_TIME", lc_time), add = TRUE)
     Sys.setlocale("LC_TIME", locale)
   }
-  days <- seq(Sys.Date(), Sys.Date() + 20, "1 day")
-  unique(weekdays(days, abbreviate))
+  days <- seq(from, from + 6, "1 day")
+  weekdays(days, abbreviate)
 }
 
 #' @rdname get_weekdays
 #' @export
-get_months <- function(abbreviate = FALSE, locale = NULL)
+get_months <- function(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 {
   month_names <- if(.Platform$OS.type == "windows")
   {
-    get_months_windows(abbreviate, locale)
+    get_months_windows(abbreviate, locale, from = from)
   } else
   {
-    get_months_posix(abbreviate, locale)
+    get_months_posix(abbreviate, locale, from = from)
   }
   or1(month_names)
 }
 
-get_months_windows <- function(abbreviate = FALSE, locale = NULL)
+get_months_windows <- function(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 {
   if(!is.null(locale))
   {
@@ -227,16 +228,14 @@ get_months_windows <- function(abbreviate = FALSE, locale = NULL)
     Sys.setlocale("LC_CTYPE", locale)
     Sys.setlocale("LC_TIME", locale)
   }
-  # 20 months is likely overkill, but there may be weird locales with long years.
-  days <- seq(Sys.Date(), by = "28 days", length.out = 20)
+  # All locales have 12 months in a year
+  days <- seq(from, by = "1 month", length.out = 12)
   month_names <- months(days, abbreviate)
   current_codepage <- as.character(l10n_info()$codepage)
-  unique(
-    iconv(month_names, from = current_codepage, to = "utf8")
-  )
+  iconv(month_names, from = current_codepage, to = "utf8")
 }
 
-get_months_posix <- function(abbreviate = FALSE, locale = NULL)
+get_months_posix <- function(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 {
   if(!is.null(locale))
   {
@@ -244,8 +243,8 @@ get_months_posix <- function(abbreviate = FALSE, locale = NULL)
     on.exit(Sys.setlocale("LC_TIME", lc_time), add = TRUE)
     Sys.setlocale("LC_TIME", locale)
   }
-  days <- seq(Sys.Date(), by = "28 days", length.out = 20)
-  unique(months(days, abbreviate))
+  days <- seq(from, by = "1 month", length.out = 12)
+  months(days, abbreviate)
 }
 
 
