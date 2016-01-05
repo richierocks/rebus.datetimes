@@ -122,7 +122,7 @@ NULL
 #' @name DateTime
 NULL
 
-#' Get the days of the week
+#' Get the days of the week or months of the year
 #'
 #' Get the names of the days of the week in a given locale.
 #' @param abbreviate A logical value indicating whether or not to return

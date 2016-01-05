@@ -3,7 +3,7 @@
 \name{get_weekdays}
 \alias{get_months}
 \alias{get_weekdays}
-\title{Get the days of the week}
+\title{Get the days of the week or months of the year}
 \usage{
 get_weekdays(abbreviate = FALSE, locale = NULL, from = Sys.Date())
 
