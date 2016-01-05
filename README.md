@@ -1,6 +1,7 @@
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 [![Is the package on CRAN?](http://www.r-pkg.org/badges/version/rebus.datetimes)](http://www.r-pkg.org/pkg/rebus.datetimes)
-[![Build Status](https://semaphoreci.com/api/v1/projects/ce7cece9-2816-4e3a-b95b-a57db96e531d/635540/badge.svg)](https://semaphoreci.com/richierocks/rebus-datetimes)
+[![SemaphoreCI Build Status](https://semaphoreci.com/api/v1/projects/ce7cece9-2816-4e3a-b95b-a57db96e531d/635540/badge.svg)](https://semaphoreci.com/richierocks/rebus-datetimes)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/gcd7g42b2d1qagay?svg=true)](https://ci.appveyor.com/project/richierocks/rebus-datetimes)
 
 # rebus.datetimes: Regular Expression Builder, Um, Something (Datetime-Related Functionality)
 
