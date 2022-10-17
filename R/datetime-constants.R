@@ -214,12 +214,14 @@ ISO_TIME <- HOUR24 %R%  ":" %R% MINUTE %R%  ":" %R% SECOND
 ISO_TIME_IN <- HOUR24_IN %R%  ":" %R% MINUTE_IN %R%  ":" %R% SECOND_IN
 
 #' @rdname DateTime
+#' @importFrom rebus.base optional
 #' @export
-ISO_DATETIME <- ISO_DATE %R% char_class(" T") %R% ISO_TIME
+ISO_DATETIME <- ISO_DATE %R% optional(group(char_class(" T") %R% ISO_TIME))
 
 #' @rdname DateTime
+#' @importFrom rebus.base optional
 #' @export
-ISO_DATETIME_IN <- ISO_DATE_IN %R% char_class(" T") %R% ISO_TIME_IN
+ISO_DATETIME_IN <- ISO_DATE_IN %R% optional(group(char_class(" T") %R% ISO_TIME_IN))
 
 
 #' @rdname DateTime

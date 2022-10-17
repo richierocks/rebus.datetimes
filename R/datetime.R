@@ -103,7 +103,7 @@ NULL
 #'
 #' dates <- seq(as.Date("2000-01-01"), as.Date("2001-01-01"), "1 day")
 #' datetimes <- seq(as.POSIXct(Sys.Date()), as.POSIXct(Sys.Date() + 1), "1 sec")
-#' times <- substring(datetimes, 12, 19)
+#' times <- substring(format(datetimes), 12, 19)
 #' stopifnot(
 #'   all(grepl(ISO_DATE, dates)),
 #'   all(grepl(ISO_TIME, times)),

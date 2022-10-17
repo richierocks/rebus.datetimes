@@ -2,10 +2,10 @@
 % Please edit documentation in R/iso-classes.R
 \name{IsoClasses}
 \alias{IsoClasses}
-\alias{IsoDateTime}
 \alias{iso_date}
-\alias{iso_datetime}
+\alias{IsoDateTime}
 \alias{iso_time}
+\alias{iso_datetime}
 \title{ISO 8601 date-time classes}
 \usage{
 iso_date(lo, hi, char_class = TRUE)
@@ -44,4 +44,3 @@ iso_date(char_class = FALSE)
 \references{
 \url{http://www.iso.org/iso/iso8601}
 }
-

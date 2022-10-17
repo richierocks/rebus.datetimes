@@ -1,7 +1,7 @@
 Package: rebus.datetimes
 Title: Date and Time Extensions for the 'rebus' Package
-Version: 0.0-1
-Date: 2015-12-16
+Version: 0.0-2
+Date: 2022-10-16
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
@@ -17,10 +17,9 @@ Suggests:
     stats,
     testthat
 License: Unlimited
-LazyData: true
-RoxygenNote: 5.0.1
 Collate:
     'imports.R'
     'datetime-constants.R'
     'datetime.R'
     'iso-classes.R'
+RoxygenNote: 7.2.1

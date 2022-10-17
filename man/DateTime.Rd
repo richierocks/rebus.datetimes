@@ -2,67 +2,181 @@
 % Please edit documentation in R/datetime-constants.R, R/datetime.R
 \docType{data}
 \name{OPT_LEADING_0}
-\alias{AM_PM}
+\alias{OPT_LEADING_0}
+\alias{DTSEP}
 \alias{CENTURY}
 \alias{CENTURY_IN}
-\alias{DAY}
-\alias{DAY_IN}
-\alias{DAY_OF_YEAR}
-\alias{DAY_OF_YEAR_IN}
-\alias{DAY_SINGLE}
-\alias{DMY}
-\alias{DMY_IN}
-\alias{DTSEP}
-\alias{DYM}
-\alias{DYM_IN}
-\alias{DateTime}
-\alias{FRACTIONAL_SECOND}
-\alias{FRACTIONAL_SECOND_IN}
-\alias{HM}
-\alias{HMS}
-\alias{HMS_IN}
-\alias{HM_IN}
-\alias{HOUR12}
-\alias{HOUR12_IN}
-\alias{HOUR12_SINGLE}
-\alias{HOUR24}
-\alias{HOUR24_IN}
-\alias{HOUR24_SINGLE}
-\alias{ISO_DATE}
-\alias{ISO_DATETIME}
-\alias{ISO_DATETIME_IN}
-\alias{ISO_DATE_IN}
-\alias{ISO_TIME}
-\alias{ISO_TIME_IN}
-\alias{MDY}
-\alias{MDY_IN}
-\alias{MINUTE}
-\alias{MINUTE_IN}
-\alias{MONTH}
-\alias{MONTH_IN}
-\alias{MS}
-\alias{MS_IN}
-\alias{MYD}
-\alias{MYD_IN}
-\alias{OPT_LEADING_0}
-\alias{SECOND}
-\alias{SECOND_IN}
-\alias{TIMEZONE}
-\alias{TIMEZONE_OFFSET}
-\alias{WEEKDAY0}
-\alias{WEEKDAY1}
-\alias{WEEK_OF_YEAR}
-\alias{WEEK_OF_YEAR_IN}
-\alias{YDM}
-\alias{YDM_IN}
 \alias{YEAR}
 \alias{YEAR2}
 \alias{YEAR4}
+\alias{MONTH}
+\alias{MONTH_IN}
+\alias{WEEK_OF_YEAR}
+\alias{WEEK_OF_YEAR_IN}
+\alias{DAY}
+\alias{DAY_IN}
+\alias{DAY_SINGLE}
+\alias{DAY_OF_YEAR}
+\alias{DAY_OF_YEAR_IN}
+\alias{WEEKDAY1}
+\alias{WEEKDAY0}
+\alias{HOUR24}
+\alias{HOUR24_SINGLE}
+\alias{HOUR24_IN}
+\alias{HOUR12}
+\alias{HOUR12_SINGLE}
+\alias{HOUR12_IN}
+\alias{MINUTE}
+\alias{MINUTE_IN}
+\alias{SECOND}
+\alias{SECOND_IN}
+\alias{FRACTIONAL_SECOND}
+\alias{FRACTIONAL_SECOND_IN}
+\alias{AM_PM}
+\alias{TIMEZONE_OFFSET}
+\alias{TIMEZONE}
+\alias{ISO_DATE}
+\alias{ISO_DATE_IN}
+\alias{ISO_TIME}
+\alias{ISO_TIME_IN}
+\alias{ISO_DATETIME}
+\alias{ISO_DATETIME_IN}
 \alias{YMD}
 \alias{YMD_IN}
+\alias{YDM}
+\alias{YDM_IN}
+\alias{MYD}
+\alias{MYD_IN}
+\alias{MDY}
+\alias{MDY_IN}
+\alias{DYM}
+\alias{DYM_IN}
+\alias{DMY}
+\alias{DMY_IN}
+\alias{HMS}
+\alias{HMS_IN}
+\alias{HM}
+\alias{HM_IN}
+\alias{MS}
+\alias{MS_IN}
+\alias{DateTime}
 \alias{datetime}
 \title{Date-time regexes}
-\format{An object of class \code{character} of length 1.}
+\format{
+An object of class \code{character} of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+
+An object of class \code{regex} (inherits from \code{character}) of length 1.
+}
 \usage{
 OPT_LEADING_0
 
@@ -288,7 +402,7 @@ MS_IN
 
 dates <- seq(as.Date("2000-01-01"), as.Date("2001-01-01"), "1 day")
 datetimes <- seq(as.POSIXct(Sys.Date()), as.POSIXct(Sys.Date() + 1), "1 sec")
-times <- substring(datetimes, 12, 19)
+times <- substring(format(datetimes), 12, 19)
 stopifnot(
   all(grepl(ISO_DATE, dates)),
   all(grepl(ISO_TIME, times)),
@@ -310,4 +424,3 @@ stopifnot(
 \code{\link{ClassGroups}}, \code{\link[base]{Sys.setlocale}}
 }
 \keyword{datasets}
-
